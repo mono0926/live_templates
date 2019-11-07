@@ -1,0 +1,29 @@
+<templateSet group="Dart">
+  <template name="todo" value="// TODO(mono): " description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="firdoc" value="import 'package:firestore_ref/firestore_ref.dart';&#10;&#10;import '$NAME_SNAKE$.dart';&#10;&#10;class $NAME$Doc extends Document&lt;$NAME$&gt; {&#10;  const $NAME$Doc(&#10;    String id,&#10;    $NAME$ entity,&#10;  ) : super(&#10;          id,&#10;          entity,&#10;        );&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="firref" value="import 'package:firestore_ref/firestore_ref.dart';&#10;import 'package:meta/meta.dart';&#10;&#10;import '$NAME_SNAKE$.dart';&#10;import '$NAME_SNAKE$_doc.dart';&#10;&#10;class $NAME$Ref extends DocumentRef&lt;$NAME$, $NAME$Doc&gt; {&#10;  const $NAME$Ref({&#10;    @required DocumentReference ref,&#10;    @required DocumentDecoder&lt;$NAME$Doc&gt; decoder,&#10;    @required EntityEncoder&lt;$NAME$&gt; encoder,&#10;  }) : super(&#10;          ref: ref,&#10;          decoder: decoder,&#10;          encoder: encoder,&#10;        );&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="firrefs" value="import 'package:firestore_ref/firestore_ref.dart';&#10;&#10;import '$NAME_SNAKE$.dart';&#10;import '$NAME_SNAKE$_doc.dart';&#10;import '$NAME_SNAKE$_ref.dart';&#10;&#10;export '$NAME_SNAKE$_ref.dart';&#10;&#10;class $NAME$sRef extends CollectionRef&lt;$NAME$, $NAME$Doc&gt; {&#10;  $NAME$sRef.ref() : super(&#10;    ref: firestoreInstance.collection(collection),&#10;    decoder: _$NAME$DocDecoder(),&#10;    encoder: _$NAME$Encoder(),&#10;  );&#10;&#10;  static const collection = '$NAME_CAMEL$s';&#10;&#10;  @override&#10;  $NAME$Ref docRef([String id]) {&#10;    return $NAME$Ref(&#10;      ref: docRefRaw(id),&#10;      encoder: encoder,&#10;      decoder: decoder,&#10;    );&#10;  }&#10;}&#10;&#10;class _$NAME$DocDecoder extends DocumentDecoder&lt;$NAME$Doc&gt; {&#10;  @override&#10;  $NAME$Doc decode(DocumentSnapshot snapshot) {&#10;    return $NAME$Doc(&#10;      snapshot.documentID,&#10;      $NAME$.fromJson(getSnapshotData(snapshot)),&#10;    );&#10;  }&#10;}&#10;&#10;class _$NAME$Encoder extends EntityEncoder&lt;$NAME$&gt; {&#10;  @override&#10;  Map&lt;String, dynamic&gt; encode($NAME$ entity) =&gt; entity.toJson();&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="NAME_CAMEL" expression="camelCase(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+</templateSet>
