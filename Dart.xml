@@ -26,9 +26,4 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="l10n" value="final l10n = L10n.of(context);" description="" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="DART" value="true" />
-    </context>
-  </template>
 </templateSet>

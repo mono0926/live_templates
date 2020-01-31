@@ -25,11 +25,6 @@
       <option name="FLUTTER" value="true" />
     </context>
   </template>
-  <template name="l10n" value="final l10n = L10n.of(context);" description="l10n" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="FLUTTER" value="true" />
-    </context>
-  </template>
   <template name="wwd" value="static Widget withDependencies() { return $TEXT$; }" description="wwd" toReformat="false" toShortenFQNames="true">
     <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
