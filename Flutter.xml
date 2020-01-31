@@ -40,9 +40,17 @@
   </template>
   <template name="clschm" value="final colorScheme = Theme.of(context).colorScheme;" description="colorScheme" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="DART" value="true" />
-      <option name="DART_STATEMENT" value="false" />
-      <option name="DART_TOPLEVEL" value="false" />
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="l10n" value="final l10n = L10n.of(context);" description="l10n" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="txtthm" value="final textTheme = Theme.of(context).textTheme;" description="textTheme" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
