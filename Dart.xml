@@ -26,4 +26,40 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="ptf" value="part '$FILENAME$.freezed.dart';" description="Part 'Freezed' statement" toReformat="false" toShortenFQNames="true">
+    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="pts" value="part '$FILENAME$.g.dart';" description="Creates a filled-in part statement" toReformat="false" toShortenFQNames="true">
+    <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="fdataclass" value="@immutable&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
+    <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="funion" value="@immutable&#10;abstract class $Union$ with _$$$Union$ {&#10;  const factory $Union$.$Case$($END$) = _$CaseUpper$;&#10;}" description="Freezed Union" toReformat="false" toShortenFQNames="true">
+    <variable name="Union" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Case" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CaseUpper" expression="capitalize(Case)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="funioncase" value="const factory $Union$.$Case$($END$) = _$CaseUpper$;" description="Freezed Union Case" toReformat="false" toShortenFQNames="true">
+    <variable name="Union" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Case" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CaseUpper" expression="capitalize(Case)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
 </templateSet>
