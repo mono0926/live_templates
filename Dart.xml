@@ -62,4 +62,12 @@
       <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
+  <template name="frmjsn" value="factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);" description="fromJson" toReformat="false" toShortenFQNames="true">
+    <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
 </templateSet>
