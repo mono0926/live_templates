@@ -38,7 +38,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="clschm" value="final colorScheme = Theme.of(context).colorScheme;" description="colorScheme" toReformat="true" toShortenFQNames="true">
+  <template name="clschm" value="final theme = Theme.of(context);&#10;final colorScheme = theme.colorScheme;" description="colorScheme" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="DART_STATEMENT" value="true" />
     </context>
