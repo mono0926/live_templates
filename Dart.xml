@@ -38,7 +38,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="fdataclass" value="@immutable&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
+  <template name="fdataclass" value="@freezed&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
     <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
