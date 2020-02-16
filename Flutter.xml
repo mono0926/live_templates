@@ -25,12 +25,6 @@
       <option name="FLUTTER" value="true" />
     </context>
   </template>
-  <template name="wwd" value="static Widget withDependencies() { return $TEXT$; }" description="wwd" toReformat="false" toShortenFQNames="true">
-    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="FLUTTER" value="true" />
-    </context>
-  </template>
   <template name="flpg" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$Page extends StatelessWidget {&#10;  const $NAME$Page({ Key key }): super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold($END$);&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
