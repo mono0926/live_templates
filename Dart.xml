@@ -26,25 +26,25 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="ptf" value="part '$FILENAME$.freezed.dart';" description="Part 'Freezed' statement" toReformat="false" toShortenFQNames="true">
+  <template name="frzpartfrz" value="part '$FILENAME$.freezed.dart';" description="Part 'Freezed' statement" toReformat="false" toShortenFQNames="true">
     <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="pts" value="part '$FILENAME$.g.dart';" description="Creates a filled-in part statement" toReformat="false" toShortenFQNames="true">
+  <template name="frzpartg" value="part '$FILENAME$.g.dart';" description="Creates a filled-in part statement" toReformat="false" toShortenFQNames="true">
     <variable name="FILENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="fdataclass" value="@freezed&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
+  <template name="frzclass" value="@freezed&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
     <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="funion" value="@immutable&#10;abstract class $Union$ with _$$$Union$ {&#10;  const factory $Union$.$Case$($END$) = _$CaseUpper$;&#10;}" description="Freezed Union" toReformat="false" toShortenFQNames="true">
+  <template name="frzunion" value="@immutable&#10;abstract class $Union$ with _$$$Union$ {&#10;  const factory $Union$.$Case$($END$) = _$CaseUpper$;&#10;}" description="Freezed Union" toReformat="false" toShortenFQNames="true">
     <variable name="Union" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Case" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CaseUpper" expression="capitalize(Case)" defaultValue="" alwaysStopAt="false" />
@@ -52,7 +52,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="funioncase" value="const factory $Union$.$Case$($END$) = _$CaseUpper$;" description="Freezed Union Case" toReformat="false" toShortenFQNames="true">
+  <template name="frzunioncase" value="const factory $Union$.$Case$($END$) = _$CaseUpper$;" description="Freezed Union Case" toReformat="false" toShortenFQNames="true">
     <variable name="Union" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Case" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CaseUpper" expression="capitalize(Case)" defaultValue="" alwaysStopAt="false" />
@@ -62,12 +62,20 @@
       <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
-  <template name="frmjsn" value="factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);" description="fromJson" toReformat="false" toShortenFQNames="true">
+  <template name="frzfromjson" value="factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);" description="fromJson" toReformat="false" toShortenFQNames="true">
     <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
       <option name="DART_STATEMENT" value="false" />
       <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="switchcase" value="switch($var$) {&#10;  case $case$:&#10;    $action$&#10;    break;&#10;  default:&#10;}&#10;  " description="Dart switch statement" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="case" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
     </context>
   </template>
   <template name="firfreezed" value="import 'package:firestore_ref/firestore_ref.dart';&#10;import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;import 'package:json_annotation/json_annotation.dart';&#10;&#10;part '$ENTITY_SNAKE$.freezed.dart';&#10;part '$ENTITY_SNAKE$.g.dart';&#10;&#10;@freezed&#10;abstract class $ENTITY$ with _$$$ENTITY$ {&#10;  factory $ENTITY$({&#10;    $END$,&#10;    @timestampJsonKey DateTime createdAt,&#10;    @timestampJsonKey DateTime updatedAt,&#10;  }) = _$ENTITY$;&#10;&#10;  factory $ENTITY$.fromJson(Map&lt;String, dynamic&gt; json) =&gt;&#10;      _$$$ENTITY$FromJson(json);&#10;}&#10;&#10;class $ENTITY$Field {}&#10;&#10;class $ENTITY$Doc extends Document&lt;$ENTITY$&gt; {&#10;  const $ENTITY$Doc(&#10;    String id,&#10;    $ENTITY$ entity,&#10;  ) : super(&#10;          id,&#10;          entity,&#10;        );&#10;}&#10;&#10;class $ENTITY$Ref extends DocumentRef&lt;$ENTITY$, $ENTITY$Doc&gt; {&#10;  const $ENTITY$Ref({&#10;    @required DocumentReference ref,&#10;    @required DocumentDecoder&lt;$ENTITY$Doc&gt; decoder,&#10;    @required EntityEncoder&lt;$ENTITY$&gt; encoder,&#10;  }) : super(&#10;          ref: ref,&#10;          decoder: decoder,&#10;          encoder: encoder,&#10;        );&#10;}&#10;&#10;class $ENTITY$sRef extends CollectionRef&lt;$ENTITY$, $ENTITY$Doc&gt; {&#10;  $ENTITY$sRef.ref()&#10;      : super(&#10;          ref: Firestore.instance.collection(collection),&#10;          decoder: (snap) =&gt; $ENTITY$Doc(&#10;            snap.documentID,&#10;            $ENTITY$.fromJson(snap.data),&#10;          ),&#10;          encoder: (entity) =&gt; replacingTimestamp(&#10;            json: entity.toJson(),&#10;            createdAt: entity.createdAt,&#10;          ),&#10;        );&#10;&#10;  static const collection = '$ENTITY_SNAKE$s';&#10;&#10;  @override&#10;  $ENTITY$Ref docRef([String id]) {&#10;    return $ENTITY$Ref(&#10;      ref: docRefRaw(id),&#10;      encoder: encoder,&#10;      decoder: decoder,&#10;    );&#10;  }&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
