@@ -47,4 +47,16 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="thm" value="final theme = Theme.of(context);" description="theme" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="prvchntfr" value="return ChangeNotifierProvider(&#10;  create: (context) =&gt; $Controller$Controller(),&#10;  builder: (context, child) {&#10;    return MultiProvider(&#10;      providers: [&#10;        Provider.value(value: context.select(($Controller$Controller c) =&gt; c.$END$)),&#10;      ],&#10;      child: child,&#10;    );&#10;  },&#10;  child: const $Page$Page._(),&#10;);" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="Controller" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Page" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
