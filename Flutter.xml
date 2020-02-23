@@ -59,4 +59,10 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="l10nmsg" value="String get $KEY$ =&gt; Intl.message(&#10;      '$END$',&#10;      name: '$KEY$',&#10;    );" description="l10n" toReformat="false" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
