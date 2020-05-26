@@ -99,4 +99,11 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="statecontroller" value="import 'package:monoca/model/model.dart';&#10;import 'package:state_notifier/state_notifier.dart';&#10;import '$NAME_SNAKE$_state.dart';&#10;&#10;export '$NAME_SNAKE$_state.dart';&#10;&#10;class $NAME$Controller extends StateNotifier&lt;$NAME$State&gt;&#10;    with LocatorMixin {&#10;  $NAME$Controller() : super(const $NAME$State());&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>

@@ -25,7 +25,7 @@
       <option name="FLUTTER" value="true" />
     </context>
   </template>
-  <template name="flpg" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$Page extends StatelessWidget {&#10;  const $NAME$Page({ Key key }): super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold($END$);&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
+  <template name="flpg" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$Page extends StatelessWidget {&#10;  const $NAME$Page({Key key}) : super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: Text(&#10;          routeName$END$,&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
@@ -63,6 +63,14 @@
     <variable name="KEY" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="wrapped" value="static Widget wrapped() {&#10;  return StateNotifierProvider&lt;$NAME$Controller, $NAME$State&gt;(&#10;    create: (context) =&gt; $NAME$Controller(),&#10;    child: const $NAME$._(),&#10;  );&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
 </templateSet>
