@@ -106,4 +106,19 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="impprovider" value="import 'package:provider/provider.dart';" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="impfoundation" value="import 'package:flutter/foundation.dart';" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="impmono_kit" value="import 'package:mono_kit/mono_kit.dart';" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
