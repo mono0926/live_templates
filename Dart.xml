@@ -126,4 +126,17 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="frzentity" value="@freezed&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;  factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
+    <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="prvdr" value="import 'package:hooks_riverpod/hooks_riverpod.dart';&#10;&#10;final $NAME$ = Provider$END$((ref) =&gt; $NAME_CAPITALIZED$(ref.read));&#10;&#10;class $NAME_CAPITALIZED$ {&#10;  $NAME_CAPITALIZED$(this._read);&#10;  final Reader _read;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="underscoresToCamelCase(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_CAPITALIZED" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
