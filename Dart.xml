@@ -59,7 +59,6 @@
     <context>
       <option name="DART" value="true" />
       <option name="DART_STATEMENT" value="false" />
-      <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
   <template name="frzfromjson" value="factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);" description="fromJson" toReformat="false" toShortenFQNames="true">
@@ -67,7 +66,6 @@
     <context>
       <option name="DART" value="true" />
       <option name="DART_STATEMENT" value="false" />
-      <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
   <template name="switchcase" value="switch($var$) {&#10;  case $case$:&#10;    $action$&#10;    break;&#10;  default:&#10;}&#10;  " description="Dart switch statement" toReformat="false" toShortenFQNames="true">
