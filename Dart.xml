@@ -38,13 +38,13 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="frzclass" value="@freezed&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
+  <template name="frzclass" value="@freezed&#10;class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
     <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="frzunion" value="@immutable&#10;abstract class $Union$ with _$$$Union$ {&#10;  const factory $Union$.$Case$($END$) = _$CaseUpper$;&#10;}" description="Freezed Union" toReformat="false" toShortenFQNames="true">
+  <template name="frzunion" value="@immutable&#10;class $Union$ with _$$$Union$ {&#10;  const factory $Union$.$Case$($END$) = _$CaseUpper$;&#10;}" description="Freezed Union" toReformat="false" toShortenFQNames="true">
     <variable name="Union" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="Case" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CaseUpper" expression="capitalize(Case)" defaultValue="" alwaysStopAt="false" />
@@ -124,7 +124,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="frzentity" value="@freezed&#10;abstract class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;  factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
+  <template name="frzentity" value="@freezed&#10;class $DataClass$ with _$$$DataClass$ {&#10;  const factory $DataClass$($END$) = _$DataClass$;&#10;  factory $DataClass$.fromJson(Map&lt;String, dynamic&gt; json) =&gt; _$$$DataClass$FromJson(json);&#10;}" description="Freezed Data Class" toReformat="false" toShortenFQNames="true">
     <variable name="DataClass" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
