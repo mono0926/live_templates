@@ -20,7 +20,7 @@
       <option name="FLUTTER" value="true" />
     </context>
   </template>
-  <template name="flpg" value="import 'package:flutter/material.dart';&#10;import 'package:flutter_hooks/flutter_hooks.dart';&#10;&#10;class $NAME$Page extends HookWidget {&#10;  const $NAME$Page({Key? key}) : super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: Text(&#10;          routeName$END$,&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
+  <template name="flpg" value="import 'package:flutter/material.dart';&#10;import 'package:hooks_riverpod/hooks_riverpod.dart';&#10;&#10;class $NAME$Page extends ConsumerWidget {&#10;  const $NAME$Page({Key? key}) : super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context, WidgetRef ref) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: Text(&#10;          routeName$END$,&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
     <variable name="NAME_SNAKE" expression="regularExpression(fileNameWithoutExtension(), &quot;_page&quot;, &quot;&quot;)" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="capitalize(underscoresToCamelCase(NAME_SNAKE))" defaultValue="" alwaysStopAt="false" />
     <context>
